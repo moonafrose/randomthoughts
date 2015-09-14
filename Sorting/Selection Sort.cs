@@ -29,6 +29,7 @@ public class Sorting
                     tmp = array[outer];
                     array[outer] = array[min];
                     array[min] = tmp;
+                    flag = 0;
                 }
             }
 

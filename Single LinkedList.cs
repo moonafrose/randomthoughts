@@ -16,11 +16,12 @@ namespace ConsoleApplication1
             l.Add(3);
             l.Add(4);
             l.Print();
-            l.RemoveIndex(1);
+            //l.RemoveIndex(1);
+           // Console.WriteLine("\n");
+           // l.Print();
+           // l.RemoveObject(5);
             Console.WriteLine("\n");
-            l.Print();
-            l.RemoveObject(5);
-            Console.WriteLine("\n");
+            l.Reverse();
             l.Print();
             Console.ReadKey();
         }
@@ -129,6 +130,27 @@ namespace ConsoleApplication1
                 Console.Write(current.Data + "->");
                 current = current.Next;
             }
+        }
+        public void Reverse()
+        {
+            Node current = head;
+
+            if (IsEmpty() || count==0) { }
+            if (count == 1) throw new Exception("Nothing to reverse, only single element");
+            else
+            {
+                Node prev = null;
+                Node next = null;
+                while (current != null)
+                {
+                    next = current.Next;
+                    if (next == null) head = current;
+                    current.Next = prev;
+                    prev = current;
+                    current = next;
+                }
+            }
+
         }
 
 

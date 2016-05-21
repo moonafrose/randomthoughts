@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace ConsoleApplication2
         static Dictionary<string, int> _wordCount = new Dictionary<string, int>();
         static void Main(string[] args)
         {
-            string fileName = @"C:\Users\yasser.afrose\Desktop\Algorithms and Data Structures - Part 1\Downloads\exercise-files-robert-horvick-ads-hashtable\WordCount\constitution.txt";
+            string fileName = @"C:\randomthoughts\Word Count using Hashtable\constitution.txt";
             if (File.Exists(fileName))
             {
 

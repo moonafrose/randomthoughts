@@ -36,4 +36,16 @@ public class PeakElement {
         }
         return left;
     }
+    public int findPeakElementI(int[] nums){
+        if(nums==null || nums.length==0){
+            return 0;
+        }
+        //Basically we are checking at each number and returning the first number that matches our criteria
+        //It runs in 0(n)
+        int i=0,j=1;
+        while(j<nums.length && nums[i]<=nums[j]){
+            i++;j++;
+        }
+        return i;
+    }
 }
